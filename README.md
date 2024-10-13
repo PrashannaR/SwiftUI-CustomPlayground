@@ -88,3 +88,15 @@ struct NavigatedScreen: View {
 ```
 
 In this example, the **Back Swipe Gesture** is applied to a navigated view (`NavigatedScreen`), and swiping from the left edge will trigger the `dismiss()` action, navigating back to the previous screen.
+
+---
+
+## Demo Video
+
+Watch the video below to see all three features—Toast, Snack Bar, and Back Swipe Gesture— in action:
+
+
+https://github.com/user-attachments/assets/988a6ca7-03c7-452e-8632-ae2bb16afe2e
+
+
+
