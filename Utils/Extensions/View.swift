@@ -24,6 +24,20 @@ extension View {
         )
     }
 
+    func snackBar(message: LocalizedStringKey, show: Binding<Bool>, textColor: Color = Color.white, backgroundColor: Color = Color.black) -> some View {
+        modifier(
+            SnackBarViewModifier(
+                show: show,
+                snackBarView: SnackBarView(
+                    show: show,
+                    message: message,
+                    textColor: textColor,
+                    backgroundColor: backgroundColor
+                )
+            )
+        )
+    }
+
     func onBackSwipe(perform action: @escaping () -> Void) -> some View {
         gesture(
             DragGesture()
