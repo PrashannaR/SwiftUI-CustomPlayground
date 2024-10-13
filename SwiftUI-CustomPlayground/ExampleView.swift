@@ -11,13 +11,26 @@ struct ExampleView: View {
     @State var showToast: Bool = false
     @State var showSnackbar: Bool = false
     var body: some View {
-        VStack {
-            Button("Toggle Toast") {
-                showToast.toggle()
-            }
+        NavigationStack {
+            ZStack {
+                Color.white
+                    .ignoresSafeArea()
 
-            Button("Toggle Snackbar") {
-                showSnackbar.toggle()
+                VStack {
+                    Button("Toggle Toast") {
+                        showToast.toggle()
+                    }
+
+                    Button("Toggle Snackbar") {
+                        showSnackbar.toggle()
+                    }
+                    
+                    NavigationLink(destination: NavigatedScreen()) {
+                        Text("Navigated to Screen")
+                    }
+                    
+                    
+                }
             }
         }
         // .toast(message: "Test Toast", show: $showToast)
