@@ -5,9 +5,8 @@
 //  Created by Prashanna Rajbhandari on 11/10/2024.
 //
 
-import Foundation
-
 import SwiftUI
+import Foundation
 
 extension View {
     func toast(message: LocalizedStringKey, show: Binding<Bool>, textColor: Color = Color.white, backgroundColor: Color = Color.black, showTime: Double = 2) -> some View {
