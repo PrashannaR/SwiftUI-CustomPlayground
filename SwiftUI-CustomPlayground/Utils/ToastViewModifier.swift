@@ -11,16 +11,18 @@ import Foundation
 struct ToastMessageView: View {
     @Binding var show: Bool
     let message: LocalizedStringKey
+    var textColor =  Color.white
+    var backgroundColor = Color.black
     
     var body: some View {
         VStack {
             Spacer()
             Text(message)
-                .foregroundStyle(.white)
+                .foregroundStyle(textColor)
                 .font(.headline)
                 .padding(.horizontal, 20)
                 .padding(.vertical, 10)
-                .background(Color.black)
+                .background(backgroundColor)
                 .cornerRadius(20)
         }
         .transition(AnyTransition.move(edge: .bottom).combined(with: .opacity))

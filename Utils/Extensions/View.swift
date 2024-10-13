@@ -10,13 +10,15 @@ import Foundation
 import SwiftUI
 
 extension View {
-    func toast(message: LocalizedStringKey, show: Binding<Bool>) -> some View {
+    func toast(message: LocalizedStringKey, show: Binding<Bool>, textColor: Color = Color.white, backgroundColor: Color = Color.black) -> some View {
         modifier(
             ToastMessageViewModifier(
                 show: show,
                 toastMessageView: ToastMessageView(
                     show: show,
-                    message: message
+                    message: message,
+                    textColor: textColor,
+                    backgroundColor: backgroundColor
                 )
             )
         )

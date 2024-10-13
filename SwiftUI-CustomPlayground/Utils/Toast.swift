@@ -16,7 +16,8 @@ struct Toast: View {
             }
                 
         }
-        .toast(message: "Test Toast", show: $showToast)
+        //.toast(message: "Test Toast", show: $showToast)
+        .toast(message: "Test Toast", show: $showToast, textColor: .white, backgroundColor: .blue)
     }
 }
 
