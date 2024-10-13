@@ -36,7 +36,7 @@ struct ExampleView: View {
         // .toast(message: "Test Toast", show: $showToast)
         .toast(message: "Test Toast", show: $showToast, textColor: .white, backgroundColor: .blue)
         // .snackBar(message: "Test Snackbar", show: $showSnackbar)
-        .snackBar(message: "Test Snackbar", show: $showSnackbar, textColor: .white, backgroundColor: .blue)
+        .snackBar(message: "Test Snackbar", show: $showSnackbar, textColor: .white, backgroundColor: .blue, showTime: 1)
     }
 }
 

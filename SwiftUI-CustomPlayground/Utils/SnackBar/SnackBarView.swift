@@ -13,6 +13,7 @@ struct SnackBarView: View {
     let message: LocalizedStringKey
     var textColor = Color.white
     var backgroundColor = Color.black
+    var showTime: Double = 2
 
     var body: some View {
         VStack {
@@ -34,7 +35,7 @@ struct SnackBarView: View {
             }
         }
         .onAppear {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + showTime) {
                 withAnimation {
                     self.show = false
                 }

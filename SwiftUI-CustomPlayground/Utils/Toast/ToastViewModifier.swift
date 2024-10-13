@@ -13,7 +13,8 @@ struct ToastMessageView: View {
     let message: LocalizedStringKey
     var textColor = Color.white
     var backgroundColor = Color.black
-
+    var showTime: Double = 2
+    
     var body: some View {
         VStack {
             Spacer()
@@ -31,7 +32,7 @@ struct ToastMessageView: View {
                 self.show = false
             }
         }.onAppear(perform: {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + showTime) {
                 withAnimation {
                     self.show = false
                 }
