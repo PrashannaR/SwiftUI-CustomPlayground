@@ -1,13 +1,13 @@
 # SwiftUI-CustomPlayground
 
-This project provides custom implementations of **Toast**, **Snack Bar**, and **Back Swipe Gesture** for SwiftUI applications. These can be easily integrated into your app using the provided view modifiers.
+This project provides custom implementations of **Toast**, **Snack Bar**, **Back Swipe Gesture** and **Slide Menu** for SwiftUI applications. These can be easily integrated into your app using the provided view modifiers.
 
 ## Features
 
 - **Toast Message**: Displays a temporary message with customizable text and background colors.
 - **Snack Bar**: A non-intrusive, temporary message view, also customizable.
 - **Back Swipe Gesture**: Enables users to navigate back by swiping from the left edge of the screen.
-
+- **Slide Menu**: Enables users to add a slide menu/view from leading, trailing, top and bottom edges of the screen.
 ## File Structure
 
 - `SwiftUI-CustomPlayground/Utils/Extensions/View.swift`:  
@@ -23,6 +23,9 @@ This project provides custom implementations of **Toast**, **Snack Bar**, and **
 - `SwiftUI-CustomPlayground/SwiftUI-CustomPlayground/NavigatedScreen.swift`:  
   Contains the implementation details for **Back Swipe Gesture**.
 
+- `SwiftUI-CustomPlayground/SwiftUI-CustomPlayground/ViewUtils/SideMenu/SlideInView.swift`:
+  Contains the implementation details for **Slide Menu**.
+  
 ## Example Usage
 
 To see an example of how to use these modifiers, refer to the following file:
@@ -91,12 +94,68 @@ In this example, the **Back Swipe Gesture** is applied to a navigated view (`Nav
 
 ---
 
+### Slide Menu Example:
+
+```swift
+struct ExampleView: View{
+    @State var showSlideMenuTrailing: Bool = false
+    @State var showSlideMenuLeading: Bool = false
+    var body: some View {
+        ZStack {
+            Color.white
+                .ignoresSafeArea()                
+            }
+        }
+        .toolbar(content: {
+            ToolbarItem(placement: .topBarTrailing) {
+                Button {
+                    showSlideMenuTrailing.toggle()
+                } label: {
+                    Image(systemName: "sidebar.right")
+                        .foregroundStyle(.blue)
+                }
+
+            }
+            ToolbarItem(placement: .topBarLeading) {
+                Button {
+                    showSlideMenuLeading.toggle()
+                } label: {
+                    Image(systemName: "sidebar.left")
+                        .foregroundStyle(.blue)
+                }
+
+            }
+        })
+        .slideInView(isActive: $showSlideMenuTrailing, edge: .trailing) {
+            ExampleSlideMenuContent()
+        }
+        .slideInView(
+            isActive: $showSlideMenuLeading,
+            edge: .leading,
+            paddingPercentage: 0.45,
+            options: SlideInViewOptions(
+                paddingColor: Color.green,
+                paddingColorOpacity: 0.45,
+                shouldDismissUponSwipe: true,
+                shouldDismissUponExternalTap: true)) {
+                ExampleSlideMenuContent()
+            }
+    }
+
+}
+
+```
+
 ## Demo Video
 
-Watch the video below to see all three features—Toast, Snack Bar, and Back Swipe Gesture— in action:
+Watch the video below to see all three features—Toast, Snack Bar, Back Swipe Gesture and Slide Menu— in action:
 
 
-https://github.com/user-attachments/assets/988a6ca7-03c7-452e-8632-ae2bb16afe2e
+
+
+
+https://github.com/user-attachments/assets/128350cd-7abc-4d67-9f0a-214635402a29
+
 
 
 
