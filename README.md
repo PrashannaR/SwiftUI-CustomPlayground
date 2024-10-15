@@ -47,7 +47,7 @@ Text("Hello, World!")
 
 ```swift
 Text("Hello, World!")
-    .toast(message: "Test Toast", show: $showToast, textColor: .white, backgroundColor: .blue, showTime: 1.5)
+    .toast(message: "Test Toast", show: $showToast, textColor: .white, backgroundColor: .blue, edge: .bottom)
 ```
 
 ### Snack Bar Example:
