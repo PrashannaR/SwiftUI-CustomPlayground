@@ -9,7 +9,7 @@ import SwiftUI
 import Foundation
 
 extension View {
-    func toast(message: LocalizedStringKey, show: Binding<Bool>, textColor: Color = Color.white, backgroundColor: Color = Color.black, showTime: Double = 2) -> some View {
+    func toast(message: LocalizedStringKey, show: Binding<Bool>, textColor: Color = Color.white, backgroundColor: Color = Color.black, showTime: Double = 2, edge: Edge = .bottom) -> some View {
         modifier(
             ToastMessageViewModifier(
                 show: show,
@@ -18,7 +18,8 @@ extension View {
                     message: message,
                     textColor: textColor,
                     backgroundColor: backgroundColor,
-                    showTime: showTime
+                    showTime: showTime,
+                    edge: edge
                 )
             )
         )

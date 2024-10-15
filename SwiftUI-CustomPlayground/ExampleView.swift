@@ -33,9 +33,8 @@ struct ExampleView: View {
                 
             }
         }
-        
         // .toast(message: "Test Toast", show: $showToast)
-        .toast(message: "Test Toast", show: $showToast, textColor: .white, backgroundColor: .blue)
+        .toast(message: "Test Toast", show: $showToast, textColor: .white, backgroundColor: .blue, edge: .bottom)
         // .snackBar(message: "Test Snackbar", show: $showSnackbar)
         .snackBar(message: "Test Snackbar", show: $showSnackbar, textColor: .white, backgroundColor: .blue, showTime: 1.5)
         .toolbar(content: {
