@@ -10,7 +10,8 @@ import SwiftUI
 struct ExampleView: View {
     @State var showToast: Bool = false
     @State var showSnackbar: Bool = false
-    @State var showSlideMenu: Bool = false
+    @State var showSlideMenuTrailing: Bool = false
+    @State var showSlideMenuLeading: Bool = false
     var body: some View {
         NavigationStack {
             ZStack {
@@ -42,17 +43,37 @@ struct ExampleView: View {
         .toolbar(content: {
             ToolbarItem(placement: .topBarTrailing) {
                 Button {
-                    showSlideMenu.toggle()
+                    showSlideMenuTrailing.toggle()
                 } label: {
                     Image(systemName: "sidebar.right")
                         .foregroundStyle(.blue)
                 }
 
             }
+            ToolbarItem(placement: .topBarLeading) {
+                Button {
+                    showSlideMenuLeading.toggle()
+                } label: {
+                    Image(systemName: "sidebar.left")
+                        .foregroundStyle(.blue)
+                }
+
+            }
         })
-        .slideInView(isActive: $showSlideMenu, edge: .trailing) {
+        .slideInView(isActive: $showSlideMenuTrailing, edge: .trailing) {
             ExampleSlideMenuContent()
         }
+        .slideInView(
+            isActive: $showSlideMenuLeading,
+            edge: .leading,
+            paddingPercentage: 0.45,
+            options: SlideInViewOptions(
+                paddingColor: Color.green,
+                paddingColorOpacity: 0.45,
+                shouldDismissUponSwipe: true,
+                shouldDismissUponExternalTap: true)) {
+                ExampleSlideMenuContent()
+            }
     }
 }
 
