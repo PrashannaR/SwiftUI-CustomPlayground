@@ -7,6 +7,5 @@
 
 /*
  TODO:
- 1. swipe menu
- 2. apple like Toast implementation
+ 1. apple like Toast implementation
  */

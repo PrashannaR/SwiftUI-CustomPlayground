@@ -11,7 +11,9 @@ import SwiftUI
 struct SwiftUI_CustomPlaygroundApp: App {
     var body: some Scene {
         WindowGroup {
-            ExampleView()
+            NavigationStack{
+                ExampleView()
+            }
         }
     }
 }

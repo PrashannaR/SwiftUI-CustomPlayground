@@ -13,26 +13,24 @@ struct ExampleView: View {
     @State var showSlideMenuTrailing: Bool = false
     @State var showSlideMenuLeading: Bool = false
     var body: some View {
-        NavigationStack {
-            ZStack {
-                Color.white
-                    .ignoresSafeArea()
+        ZStack {
+            Color.white
+                .ignoresSafeArea()
 
-                VStack {
-                    Button("Toggle Toast") {
-                        showToast.toggle()
-                    }
-
-                    Button("Toggle Snackbar") {
-                        showSnackbar.toggle()
-                    }
-                    
-                    NavigationLink(destination: NavigatedScreen()) {
-                        Text("Navigated to Screen")
-                    }
-                    
-                    
+            VStack {
+                Button("Toggle Toast") {
+                    showToast.toggle()
                 }
+
+                Button("Toggle Snackbar") {
+                    showSnackbar.toggle()
+                }
+                
+                NavigationLink(destination: NavigatedScreen()) {
+                    Text("Navigated to Screen")
+                }
+                
+                
             }
         }
         
