@@ -157,5 +157,12 @@ Watch the video below to see all three features—Toast, Snack Bar, Back Swipe G
 https://github.com/user-attachments/assets/128350cd-7abc-4d67-9f0a-214635402a29
 
 
+---
+### References
+
+The implementation of the slide-in menu view in this project has been highly referenced from the tutorial by Rebeloper - Rebel Developer. You can find the original tutorial here: [YouTube Video](https://www.youtube.com/watch?v=9WKVXHgEFU8&ab_channel=Rebeloper-RebelDeveloper).
+
+
+
 
 
