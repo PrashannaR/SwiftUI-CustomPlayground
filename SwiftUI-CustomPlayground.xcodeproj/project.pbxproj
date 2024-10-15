@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		5DCBE4512CBE3B390086ADD5 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCBE4502CBE3B2D0086ADD5 /* ToDo.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		5D70B14A2CB95365005DCC0D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +31,7 @@
 		5D70B1392CB95363005DCC0D /* SwiftUI-CustomPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-CustomPlayground.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D70B1492CB95365005DCC0D /* SwiftUI-CustomPlaygroundTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftUI-CustomPlaygroundTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D70B1532CB95365005DCC0D /* SwiftUI-CustomPlaygroundUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftUI-CustomPlaygroundUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DCBE4502CBE3B2D0086ADD5 /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -80,6 +85,7 @@
 		5D70B1302CB95363005DCC0D = {
 			isa = PBXGroup;
 			children = (
+				5DCBE4502CBE3B2D0086ADD5 /* ToDo.swift */,
 				5D70B1662CB95372005DCC0D /* Utils */,
 				5D70B13B2CB95363005DCC0D /* SwiftUI-CustomPlayground */,
 				5D70B14C2CB95365005DCC0D /* SwiftUI-CustomPlaygroundTests */,
@@ -243,6 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DCBE4512CBE3B390086ADD5 /* ToDo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
