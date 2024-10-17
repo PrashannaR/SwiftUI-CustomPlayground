@@ -15,14 +15,13 @@ struct ToastMessageView: View {
     var backgroundColor = Color.black
     var showTime: Double = 2
     var edge: Edge = .bottom
-    
+
     var body: some View {
-        if edge == .bottom{
+        if edge == .bottom {
             toastFromBotton()
-        }else{
+        } else {
             toastFromTop()
         }
-        
     }
 }
 
@@ -40,9 +39,8 @@ struct ToastMessageViewModifier: ViewModifier {
     }
 }
 
-
-extension ToastMessageView{
-    private func toastFromBotton() -> some View{
+extension ToastMessageView {
+    private func toastFromBotton() -> some View {
         VStack {
             Spacer()
             Text(message)
@@ -66,9 +64,9 @@ extension ToastMessageView{
             }
         })
     }
-    
-    private func toastFromTop() -> some View{
-        ZStack{
+
+    private func toastFromTop() -> some View {
+        ZStack {
             VStack {
                 Text(message)
                     .foregroundStyle(textColor)

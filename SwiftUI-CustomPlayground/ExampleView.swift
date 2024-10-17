@@ -25,12 +25,10 @@ struct ExampleView: View {
                 Button("Toggle Snackbar") {
                     showSnackbar.toggle()
                 }
-                
+
                 NavigationLink(destination: NavigatedScreen()) {
                     Text("Navigated to Screen")
                 }
-                
-                
             }
         }
         // .toast(message: "Test Toast", show: $showToast)
@@ -45,7 +43,6 @@ struct ExampleView: View {
                     Image(systemName: "sidebar.right")
                         .foregroundStyle(.blue)
                 }
-
             }
             ToolbarItem(placement: .topBarLeading) {
                 Button {
@@ -54,7 +51,6 @@ struct ExampleView: View {
                     Image(systemName: "sidebar.left")
                         .foregroundStyle(.blue)
                 }
-
             }
         })
         .slideInView(isActive: $showSlideMenuTrailing, edge: .trailing) {
@@ -69,13 +65,13 @@ struct ExampleView: View {
                 paddingColorOpacity: 0.45,
                 shouldDismissUponSwipe: true,
                 shouldDismissUponExternalTap: true)) {
-                ExampleSlideMenuContent()
-            }
+            ExampleSlideMenuContent()
+        }
     }
 }
 
 #Preview {
-    NavigationStack{
+    NavigationStack {
         ExampleView()
     }
 }

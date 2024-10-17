@@ -5,8 +5,8 @@
 //  Created by Prashanna Rajbhandari on 11/10/2024.
 //
 
-import SwiftUI
 import Foundation
+import SwiftUI
 
 extension View {
     func toast(message: LocalizedStringKey, show: Binding<Bool>, textColor: Color = Color.white, backgroundColor: Color = Color.black, showTime: Double = 2, edge: Edge = .bottom) -> some View {
@@ -51,7 +51,6 @@ extension View {
         )
     }
 }
-
 
 public extension View {
     /// Adds a slide in view onto the container view
